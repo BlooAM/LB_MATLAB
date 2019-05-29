@@ -35,5 +35,5 @@ end
 for j=1:m0
     f(2,n0,j) = f(4,n0,j);
     f(6,n0,j) = f(8,n0,j);
-    f(9,n0,j) = f(9,n0,j);
+    f(9,n0,j) = f(7,n0,j); %???
 end

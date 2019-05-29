@@ -1,13 +1,14 @@
 figure(1)
 set(gcf, 'Position', [10, 10, 1280, 720],'color',[0.8 0.8 0.8])
-trisurf(tri,X,Y,sqrt(u'.^2+v'.^2))
+% trisurf(tri,X,Y,sqrt(u'.^2+v'.^2))
+trisurf(tri,X,Y,(u.^2+v.^2)')
 shading('interp')
 colormap('jet')
 colorbar
 axis image
 view([0 90])
-frame = getframe(gcf);
-writeVideo(video1,frame);
+% frame = getframe(gcf);
+% writeVideo(video1,frame);
 drawnow
 
 % figure(2)
@@ -22,7 +23,7 @@ drawnow
 % drawnow
 % frame = getframe(gcf);
 % writeVideo(video2,frame);
-% 
+
 % figure(3)
 % set(gcf, 'Position', [10, 10, 1280, 720],'color',[0.8 0.8 0.8])
 % trisurf(tri,X,Y,u')
